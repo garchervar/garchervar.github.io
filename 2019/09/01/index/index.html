@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="flutter入门构建简单样式 flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。 先来说说在我看来，Android开发与web开发在思路上的不同之处。#一切皆为widgetWidget是Flutter应用程序用户界面的基本构建块。每个Widget都是用户界面一部分的不可变声明。 与其他将视图、控制器、">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-22T13:28:00.318Z">
+<meta property="og:updated_time" content="2019-09-22T13:34:50.008Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="flutter">
 <meta name="twitter:description" content="flutter入门构建简单样式 flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。 先来说说在我看来，Android开发与web开发在思路上的不同之处。#一切皆为widgetWidget是Flutter应用程序用户界面的基本构建块。每个Widget都是用户界面一部分的不可变声明。 与其他将视图、控制器、">
@@ -177,12 +177,12 @@
         <p><strong>flutter入门构建简单样式</strong></p>
 <p>flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。</p>
 <h2 id="先来说说在我看来，Android开发与web开发在思路上的不同之处。"><a href="#先来说说在我看来，Android开发与web开发在思路上的不同之处。" class="headerlink" title="先来说说在我看来，Android开发与web开发在思路上的不同之处。"></a>先来说说在我看来，Android开发与web开发在思路上的不同之处。</h2><p>#一切皆为widget<br>Widget是Flutter应用程序用户界面的基本构建块。每个Widget都是用户界面一部分的不可变声明。 与其他将视图、控制器、布局和其他属性分离的框架不同，Flutter具有一致的统一对象模型：widget。 </p>
-<p>####在前端开发中html使用了src来经行页面的跳转，以vue为例子也是使用了link—to类似的东西来呈现页面的变化。在android的页面里没有这种东西。（没看过原生安卓的开发例子）但是在flutter中是通过一个class继承state的方法来实现的。下面举个例子##</p>
+<p>####在前端开发中html使用了src来经行页面的跳转，以vue为例子也是使用了link—to类似的东西来呈现页面的变化。在android的页面里没有这种东西。（没看过原生安卓的开发例子）但是在flutter中是通过一个class继承state的方法来实现的。下面举个例子</p>
 <p>class Home extends StatefulWidget {<br>  @override<br>  State<statefulwidget>   <font color="red">createState()</font>=&gt; new _HomeState();</statefulwidget></p>
 <p>}</p>
 <p>class  <font color="red">_HomeState</font> extends State&lt; Home &gt; {<br>  int _currentIndex = 0;<br>  final List<widget> _children = [<br>    new PlaceholderWidget(‘Home’),<br>    new LayoutDemo(),<br>    new Place(),<br>  ];</widget></p>
-<p>##在上面的例子中是一个设计导航栏的一部分代码，在本例中——HomeState通过继承state来更改当前的页面状态，把各个状态保存在一个数组里，点击来实现一个对象的创建与销毁（有空上图）。。##</p>
-<p>#二 布局#</p>
+<p>##在上面的例子中是一个设计导航栏的一部分代码，在本例中——HomeState通过继承state来更改当前的页面状态，把各个状态保存在一个数组里，点击来实现一个对象的创建与销毁（有空上图）。。</p>
+<p>#二 布局</p>
 <p>##说到android的页面就要说到布局。在flutter中有一下几种布局方式，一一列出也不详细介绍了。<br>一.线性布局（Row水平）（column垂直）<br>二.flex的弹性布局<br>三.层叠布局和Web中的绝对定位、Android中的Frame布局是相似的(stack)(position)</p>
 <p>##flutter有个东西叫做container翻译过来就是容器，可以这么看，把每一个页面吗当作一个容器，而row啊column等就是搭建构造这个容器的方法，所以布局被写在一个大的container里（这不是唯一方法而是简单的常用方法）<br>container也是一个widget，在我看来，每一个写好的widget可以被当成web开发框架中的组件使用，一次封装多次使用，比如web中的导航栏，页脚在flutter里就是每一个widget。</p>
 <p>#滑动</p>
