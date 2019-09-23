@@ -43,7 +43,7 @@
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
-			<img src="carton.jpg" class="js-avatar">
+			<img src class="js-avatar">
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/">garcherd</a></h1>
@@ -55,7 +55,7 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/随笔/index.html">随笔</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -152,6 +152,137 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/23/锁/">锁</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/23/锁/" class="archive-article-date">
+  	<time datetime="2019-09-23T03:49:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>java 的几种锁</strong></p>
+<p>###一对象锁，<br>又是方法锁位于一个实例化 的方法前如：  class syncchornize method（）{ }</p>
+<p>###类锁<br>类锁是锁住整个类，当有多个线程来声明这个类的对象时候将会被阻塞，直到拥有这个类锁的对象呗销毁或者主动释放了类锁，这个时候在被阻塞的线程被挑选出一个占有该类锁，声明该类的对象。</p>
+<p>##!!对象锁与类锁要严格区别开来</p>
+<p>##1.一个类的类锁就只有一个，所以一个类的锁都是相同的</p>
+<p>##2.一个类中的对象锁有很多个，一个类的对象锁互不相同；</p>
+<p>##3.类锁和对象锁互不相同；</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/23/锁/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-bolg锁" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/23/bolg锁/">bolg锁</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/23/bolg锁/" class="archive-article-date">
+  	<time datetime="2019-09-23T03:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-23</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/23/bolg锁/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -174,7 +305,50 @@
       
         <p><strong>flutter入门构建简单样式</strong></p>
 <p>flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。</p>
+<h2 id="先来说说在我看来，Android开发与web开发在思路上的不同之处。"><a href="#先来说说在我看来，Android开发与web开发在思路上的不同之处。" class="headerlink" title="先来说说在我看来，Android开发与web开发在思路上的不同之处。"></a>先来说说在我看来，Android开发与web开发在思路上的不同之处。</h2><!--more
+#一切皆为widget
+Widget是Flutter应用程序用户界面的基本构建块。每个Widget都是用户界面一部分的不可变声明。 与其他将视图、控制器、布局和其他属性分离的框架不同，Flutter具有一致的统一对象模型：widget。 
 
+####在前端开发中html使用了src来经行页面的跳转，以vue为例子也是使用了link—to类似的东西来呈现页面的变化。在android的页面里没有这种东西。（没看过原生安卓的开发例子）但是在flutter中是通过一个class继承state的方法来实现的。下面举个例子
+
+
+class Home extends StatefulWidget {
+  @override
+  State<StatefulWidget>   <font color=red >createState()</font>=> new _HomeState();
+
+}
+
+class  <font color=red >_HomeState</font> extends State< Home > {
+  int _currentIndex = 0;
+  final List<Widget> _children = [
+    new PlaceholderWidget('Home'),
+    new LayoutDemo(),
+    new Place(),
+  ];
+
+##在上面的例子中是一个设计导航栏的一部分代码，在本例中——HomeState通过继承state来更改当前的页面状态，把各个状态保存在一个数组里，点击来实现一个对象的创建与销毁（有空上图）。。
+#二 布局
+##说到android的页面就要说到布局。在flutter中有一下几种布局方式，一一列出也不详细介绍了。
+一.线性布局（Row水平）（column垂直）
+二.flex的弹性布局
+三.层叠布局和Web中的绝对定位、Android中的Frame布局是相似的(stack)(position)
+
+##flutter有个东西叫做container翻译过来就是容器，可以这么看，把每一个页面吗当作一个容器，而row啊column等就是搭建构造这个容器的方法，所以布局被写在一个大的container里（这不是唯一方法而是简单的常用方法）
+container也是一个widget，在我看来，每一个写好的widget可以被当成web开发框架中的组件使用，一次封装多次使用，比如web中的导航栏，页脚在flutter里就是每一个widget。
+#滑动
+##当组件内容超过当前显示视口(ViewPort)时，如果没有特殊处理，Flutter则会提示Overflow错误。
+滑动在web中是个再简单不过的东西，但是再flutter里实现滑动需要调用可滑动组件viewList（）。
+ children: <Widget>[
+    Icon(Icons.ac_unit),
+    Icon(Icons.airport_shuttle),
+    Icon(Icons.all_inclusive),
+    Icon(Icons.beach_access),
+    Icon(Icons.cake),
+    Icon(Icons.free_breakfast),
+  ],
+  在滑动组件中连续使用布局多个widget可实现效果
+
+-->
       
 
       
