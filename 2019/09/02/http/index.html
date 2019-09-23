@@ -8,17 +8,17 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>想起http还没有仔细思考过 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢1.域名解析　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，">
+  <meta name="description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢">
 <meta property="og:type" content="article">
 <meta property="og:title" content="想起http还没有仔细思考过">
 <meta property="og:url" content="http://yoursite.com/2019/09/02/http/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢1.域名解析　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，">
+<meta property="og:description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-23T10:50:40.025Z">
+<meta property="og:updated_time" content="2019-09-23T10:52:12.412Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="想起http还没有仔细思考过">
-<meta name="twitter:description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢1.域名解析　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，">
+<meta name="twitter:description" content="http url认知总概 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的www.baidu.com会通过DNS域名解析，得到对应的IP。 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。 疑问是怎么进行DNS解析的呢">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -175,7 +175,8 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="http-url认知"><a href="#http-url认知" class="headerlink" title="http url认知"></a>http url认知</h1><h2 id="总概"><a href="#总概" class="headerlink" title="总概"></a>总概</h2><p> 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的<a href="http://www.baidu.com会通过DNS域名解析，得到对应的IP。" target="_blank" rel="noopener">www.baidu.com会通过DNS域名解析，得到对应的IP。</a><br> 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。</p>
-<h4 id="疑问是怎么进行DNS解析的呢"><a href="#疑问是怎么进行DNS解析的呢" class="headerlink" title="疑问是怎么进行DNS解析的呢"></a>疑问是怎么进行DNS解析的呢</h4><p>1.域名解析<br>　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，大概只有1分钟，且只能容纳1000条缓存）</p>
+<h4 id="疑问是怎么进行DNS解析的呢"><a href="#疑问是怎么进行DNS解析的呢" class="headerlink" title="疑问是怎么进行DNS解析的呢"></a>疑问是怎么进行DNS解析的呢</h4> <a id="more"></a>
+<p>1.域名解析<br>　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，大概只有1分钟，且只能容纳1000条缓存）</p>
 <p>　　b）如果浏览器自身的缓存里面没有找到，那么浏览器会搜索系统自身的DNS缓存</p>
 <p>　　c）如果还没有找到，那么尝试从 hosts文件里面去找</p>
 <p>　　d）在前面三个过程都没获取到的情况下，就递归地去域名服务器去查找，具体过程如下<br>本地域名服务器向根域名服务器发起请求，根域名服务器返回com域的顶级域名服务器的地址；</p>
