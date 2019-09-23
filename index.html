@@ -217,6 +217,84 @@
 
 
   
+    <article id="post-http" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/09/02/http/">想起http还没有仔细思考过</a>
+    </h1>
+  
+
+        
+        <a href="/2019/09/02/http/" class="archive-article-date">
+  	<time datetime="2019-09-02T11:49:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="http-url认知"><a href="#http-url认知" class="headerlink" title="http url认知"></a>http url认知</h1><h2 id="总概"><a href="#总概" class="headerlink" title="总概"></a>总概</h2><p> 进行域名解析，自己搭建过网站的人都知道，在阿里云啊各种云上购买服务都会提供解析。如你输入的<a href="http://www.baidu.com会通过DNS域名解析，得到对应的IP。" target="_blank" rel="noopener">www.baidu.com会通过DNS域名解析，得到对应的IP。</a><br> 每一台服务器都有自己的Ip，就这样通过ip找了对应的服务器。Tcp三次握手连接服务器，建立成功服务器发起http请求。</p>
+<h4 id="疑问是怎么进行DNS解析的呢"><a href="#疑问是怎么进行DNS解析的呢" class="headerlink" title="疑问是怎么进行DNS解析的呢"></a>疑问是怎么进行DNS解析的呢</h4><p>1.域名解析<br>　　a）首先会搜索浏览器自身的DNS缓存（缓存时间比较短，大概只有1分钟，且只能容纳1000条缓存）</p>
+<p>　　b）如果浏览器自身的缓存里面没有找到，那么浏览器会搜索系统自身的DNS缓存</p>
+<p>　　c）如果还没有找到，那么尝试从 hosts文件里面去找</p>
+<p>　　d）在前面三个过程都没获取到的情况下，就递归地去域名服务器去查找，具体过程如下<br>本地域名服务器向根域名服务器发起请求，根域名服务器返回com域的顶级域名服务器的地址；</p>
+<p>本地域名服务器向com域的顶级域名服务器发起请求，返回权限域名服务器地址；</p>
+<p>本地域名服务器向权限域名服务器发起请求，得到IP地址；</p>
+<p>本地域名服务器将得到的IP地址返回给操作系统，同时自己将IP地址缓存起来；<br>操作系统将IP地址返回给浏览器，同时自己也将IP地址缓存起来；</p>
+<h3 id="递归转载：https-blog-csdn-net-hellodake-article-details-81974421"><a href="#递归转载：https-blog-csdn-net-hellodake-article-details-81974421" class="headerlink" title="递归转载：https://blog.csdn.net/hellodake/article/details/81974421"></a>递归转载：<a href="https://blog.csdn.net/hellodake/article/details/81974421" target="_blank" rel="noopener">https://blog.csdn.net/hellodake/article/details/81974421</a></h3><p>2.三次握手(TCP),客户端率先发起的连接请求包括这次在内的三次应答就是三次握手了。<br>3.建立TCP连接之后，发起HTTP请求<br>　　HTTP请求报文由三部分组成：请求行，请求头和请求正文</p>
+<p>　　请求行：用于描述客户端的请求方式，请求的资源名称以及使用的HTTP协议的版本号（例：GET/books/java.html HTTP/1.1）</p>
+<p>　　请求头：用于描述客户端请求哪台主机，以及客户端的一些环境信息等</p>
+<p>　　注：这里提一个请求头 Connection，Connection设置为 keep-alive用于说明 客户端这边设置的是，本次HTTP请求之后并不需要关闭TCP连接，这样可以使下次HTTP请求使用相同的TCP通道，节省TCP建立连接的时间</p>
+<p>　　请求正文：当使用POST, PUT等方法时，通常需要客户端向服务器传递数据。这些数据就储存在请求正文中（GET方式是保存在url地址后面，不会放到这里）<br>4.服务器端响应http请求，浏览器得到html代码<br>　　HTTP响应也由三部分组成：状态码，响应头和实体内容</p>
+<p>　　状态码：状态码用于表示服务器对请求的处理结果</p>
+<p>　　列举几种常见的：200（没有问题） 302（要你去找别人） 304（要你去拿缓存） 307（要你去拿缓存） 403（有这个资源，但是没有访问权限） 404（服务器没有这个资源） 500（服务器这边有问题）</p>
+<p>　　若干响应头：响应头用于描述服务器的基本信息，以及客户端如何处理数据</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/09/02/http/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-index" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
