@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>flutter | Hexo</title>
+  <title>Archives: 2019/8 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="flutter入门构建简单样式 flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。 先来说说在我看来，Android开发与web开发在思路上的不同之处。">
-<meta property="og:type" content="article">
-<meta property="og:title" content="flutter">
-<meta property="og:url" content="http://yoursite.com/2019/09/01/index/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/archives/2019/08/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="flutter入门构建简单样式 flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。 先来说说在我看来，Android开发与web开发在思路上的不同之处。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-22T13:41:10.930Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="flutter">
-<meta name="twitter:description" content="flutter入门构建简单样式 flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。 先来说说在我看来，Android开发与web开发在思路上的不同之处。">
+<meta name="twitter:title" content="Hexo">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -154,209 +150,49 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-index" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      flutter
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2019" class="archive-year">2019</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2019/08/01/bolg锁/" class="archive-article-date">
+  	<time datetime="2019-08-01T03:48:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2019/08/01/bolg锁/">倒计时</a>
     </h1>
   
 
-        
-        <a href="/2019/09/01/index/" class="archive-article-date">
-  	<time datetime="2019-09-01T11:49:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>flutter入门构建简单样式</strong></p>
-<p>flutter作文谷歌开发的一个新移动框架在于原生Android的写法对比起来少了很多步骤，至少在activiti对控件的使用少大大减少了代码量。</p>
-<h2 id="先来说说在我看来，Android开发与web开发在思路上的不同之处。"><a href="#先来说说在我看来，Android开发与web开发在思路上的不同之处。" class="headerlink" title="先来说说在我看来，Android开发与web开发在思路上的不同之处。"></a>先来说说在我看来，Android开发与web开发在思路上的不同之处。</h2><!--more
-#一切皆为widget
-Widget是Flutter应用程序用户界面的基本构建块。每个Widget都是用户界面一部分的不可变声明。 与其他将视图、控制器、布局和其他属性分离的框架不同，Flutter具有一致的统一对象模型：widget。 
+        <div class="article-info info-on-right">
+          
+          
 
-####在前端开发中html使用了src来经行页面的跳转，以vue为例子也是使用了link—to类似的东西来呈现页面的变化。在android的页面里没有这种东西。（没看过原生安卓的开发例子）但是在flutter中是通过一个class继承state的方法来实现的。下面举个例子
-
-
-class Home extends StatefulWidget {
-  @override
-  State<StatefulWidget>   <font color=red >createState()</font>=> new _HomeState();
-
-}
-
-class  <font color=red >_HomeState</font> extends State< Home > {
-  int _currentIndex = 0;
-  final List<Widget> _children = [
-    new PlaceholderWidget('Home'),
-    new LayoutDemo(),
-    new Place(),
-  ];
-
-##在上面的例子中是一个设计导航栏的一部分代码，在本例中——HomeState通过继承state来更改当前的页面状态，把各个状态保存在一个数组里，点击来实现一个对象的创建与销毁（有空上图）。。
-#二 布局
-##说到android的页面就要说到布局。在flutter中有一下几种布局方式，一一列出也不详细介绍了。
-一.线性布局（Row水平）（column垂直）
-二.flex的弹性布局
-三.层叠布局和Web中的绝对定位、Android中的Frame布局是相似的(stack)(position)
-
-##flutter有个东西叫做container翻译过来就是容器，可以这么看，把每一个页面吗当作一个容器，而row啊column等就是搭建构造这个容器的方法，所以布局被写在一个大的container里（这不是唯一方法而是简单的常用方法）
-container也是一个widget，在我看来，每一个写好的widget可以被当成web开发框架中的组件使用，一次封装多次使用，比如web中的导航栏，页脚在flutter里就是每一个widget。
-#滑动
-##当组件内容超过当前显示视口(ViewPort)时，如果没有特殊处理，Flutter则会提示Overflow错误。
-滑动在web中是个再简单不过的东西，但是再flutter里实现滑动需要调用可滑动组件viewList（）。
- children: <Widget>[
-    Icon(Icons.ac_unit),
-    Icon(Icons.airport_shuttle),
-    Icon(Icons.all_inclusive),
-    Icon(Icons.beach_access),
-    Icon(Icons.cake),
-    Icon(Icons.free_breakfast),
-  ],
-  在滑动组件中连续使用布局多个widget可实现效果
-
--->
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
-        </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/09/01/index/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2019/09/23/锁/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          锁
-        
-      </div>
-    </a>
   
   
-    <a href="/2019/08/01/bolg锁/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">倒计时</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -379,8 +215,8 @@ container也是一个widget，在我看来，每一个写好的widget可以被�
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
