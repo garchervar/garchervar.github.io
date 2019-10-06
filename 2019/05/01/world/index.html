@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="springboot思考================== 写的东西还是明天再说吧。。">
+<meta name="description" content="springboot思考说@注解==================">
 <meta property="og:type" content="article">
 <meta property="og:title" content="world">
 <meta property="og:url" content="http://yoursite.com/2019/05/01/world/index.html">
 <meta property="og:site_name" content="星星">
-<meta property="og:description" content="springboot思考================== 写的东西还是明天再说吧。。">
+<meta property="og:description" content="springboot思考说@注解==================">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-22T12:24:14.740Z">
+<meta property="og:updated_time" content="2019-09-30T04:09:37.801Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="world">
-<meta name="twitter:description" content="springboot思考================== 写的东西还是明天再说吧。。">
+<meta name="twitter:description" content="springboot思考说@注解==================">
 
 
 
@@ -329,9 +329,19 @@
       
 
       
-        <h3 id="springboot思考"><a href="#springboot思考" class="headerlink" title="springboot思考"></a>springboot思考</h3><p>==================</p>
-<p>写的东西还是明天再说吧。。</p>
+        <h3 id="springboot思考说-注解"><a href="#springboot思考说-注解" class="headerlink" title="springboot思考说@注解"></a>springboot思考说@注解</h3><p>==================</p>
+<a id="more"></a>
+<h2 id="configuration"><a href="#configuration" class="headerlink" title="@configuration"></a>@configuration</h2><p>1.从定义来看， @Configuration 注解本质上还是 @Component，因此 <a href="context:component-scan/" target="_blank" rel="noopener">context:component-scan/</a> 或者 @ComponentScan 都能处理@Configuration 注解的类。<br>2.@Configuration 标记的类必须符合下面的要求：<br>         （1）、配置类必须以类的形式提供（不能是工厂方法返回的实例），允许通过生成子类在运行时增强（cglib 动态代理）；<br>               *(什么是动态代理)<br>         （2）、配置类不能是 final 类（没法动态代理）。</p>
+<pre><code>     （3）、@Configuration不可以是匿名类；
 
+     （4）、配置注解通常为了通过 @Bean 注解生成 Spring 容器管理的类；
+
+     （5）、配置类必须是非本地的（即不能在方法中声明，不能是 private）；
+
+     （6）、任何嵌套配置类都必须声明为static；
+
+（7）、@Bean 方法可能不会反过来创建进一步的配置类（也就是返回的 bean 如果带有 @Configuration，也不会被特殊处理，只会作为普通的 bean）；</code></pre><h2 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h2><pre><code>扫描bean批量注入IoC
+@ComponentScan注解默认就会装配标识了@Controller，@Service，@Repository，@Component注解的类到spring容器中；</code></pre>
       
     </div>
     
@@ -486,7 +496,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#springboot思考"><span class="nav-number">1.</span> <span class="nav-text">springboot思考</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#springboot思考说-注解"><span class="nav-number">1.</span> <span class="nav-text">springboot思考说@注解</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number"></span> <span class="nav-text">@configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ComponentScan"><span class="nav-number"></span> <span class="nav-text">@ComponentScan</span></a></li></div>
             
 
           </div>
