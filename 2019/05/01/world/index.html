@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="spring,java,">
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="springboot思考说@注解==================">
+<meta name="description" content="springboot思考说@注解================== @configuration1.从定义来看， @Configuration 注解本质上还是 @Component，因此 context:component-scan/ 或者 @ComponentScan 都能处理@Configuration 注解的类。">
+<meta name="keywords" content="spring,java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spring注解">
 <meta property="og:url" content="http://yoursite.com/2019/05/01/world/index.html">
 <meta property="og:site_name" content="星星">
-<meta property="og:description" content="springboot思考说@注解==================">
+<meta property="og:description" content="springboot思考说@注解================== @configuration1.从定义来看， @Configuration 注解本质上还是 @Component，因此 context:component-scan/ 或者 @ComponentScan 都能处理@Configuration 注解的类。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-06T07:47:10.265Z">
+<meta property="og:updated_time" content="2019-10-06T07:47:48.554Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring注解">
-<meta name="twitter:description" content="springboot思考说@注解==================">
+<meta name="twitter:description" content="springboot思考说@注解================== @configuration1.从定义来看， @Configuration 注解本质上还是 @Component，因此 context:component-scan/ 或者 @ComponentScan 都能处理@Configuration 注解的类。">
 
 
 
@@ -330,8 +331,8 @@
 
       
         <h3 id="springboot思考说-注解"><a href="#springboot思考说-注解" class="headerlink" title="springboot思考说@注解"></a>springboot思考说@注解</h3><p>==================</p>
-<a id="more"></a>
-<h2 id="configuration"><a href="#configuration" class="headerlink" title="@configuration"></a>@configuration</h2><p>1.从定义来看， @Configuration 注解本质上还是 @Component，因此 <a href="context:component-scan/" target="_blank" rel="noopener">context:component-scan/</a> 或者 @ComponentScan 都能处理@Configuration 注解的类。<br>2.@Configuration 标记的类必须符合下面的要求：<br>         （1）、配置类必须以类的形式提供（不能是工厂方法返回的实例），允许通过生成子类在运行时增强（cglib 动态代理）；<br>               *(什么是动态代理)<br>         （2）、配置类不能是 final 类（没法动态代理）。</p>
+<h2 id="configuration"><a href="#configuration" class="headerlink" title="@configuration"></a>@configuration</h2><p>1.从定义来看， @Configuration 注解本质上还是 @Component，因此 <a href="context:component-scan/" target="_blank" rel="noopener">context:component-scan/</a> 或者 @ComponentScan 都能处理@Configuration 注解的类。<a id="more"></a></p>
+<p>2.@Configuration 标记的类必须符合下面的要求：<br>         （1）、配置类必须以类的形式提供（不能是工厂方法返回的实例），允许通过生成子类在运行时增强（cglib 动态代理）；<br>               *(什么是动态代理)<br>         （2）、配置类不能是 final 类（没法动态代理）。</p>
 <pre><code>     （3）、@Configuration不可以是匿名类；
 
      （4）、配置注解通常为了通过 @Bean 注解生成 Spring 容器管理的类；
@@ -355,6 +356,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spring/" rel="tag"># spring</a>
+          
+            <a href="/tags/java/" rel="tag"># java</a>
+          
+        </div>
       
 
       
@@ -463,7 +472,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
