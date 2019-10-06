@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="redis,单线程,">
 
 
 
@@ -79,13 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="星星">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta name="description" content="单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。原因主要是以下三点：">
+<meta name="keywords" content="redis,单线程">
+<meta property="og:type" content="article">
+<meta property="og:title" content="redis">
+<meta property="og:url" content="http://yoursite.com/2019/10/06/redis/index.html">
 <meta property="og:site_name" content="星星">
+<meta property="og:description" content="单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。原因主要是以下三点：">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-06T07:59:21.276Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="星星">
+<meta name="twitter:title" content="redis">
+<meta name="twitter:description" content="单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。原因主要是以下三点：">
 
 
 
@@ -115,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/06/redis/">
 
 
 
 
 
-  <title>Archive | 星星</title>
+  <title>redis | 星星</title>
   
 
 
@@ -140,7 +145,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -244,387 +249,174 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/06/redis/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="garcherd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星星">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">redis</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-06T15:57:44+08:00">
+                2019-10-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-        Um..! 10 posts in total. Keep on posting.
-      </span>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
-        
-        
+            
+          
 
-        
+          
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/06/tree/" itemprop="url">
-              
-                <span itemprop="name">红黑树</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-06T16:48:16+08:00" content="2019-10-06">
-          10-06
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+        </div>
+      </header>
+    
 
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/06/redis-1/" itemprop="url">
-              
-                <span itemprop="name">redis</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-06T15:59:32+08:00" content="2019-10-06">
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
+      
+        <h2 id="单线程的-Redis-为什么这么快-这个问题是对-Redis-内部机制的一个考察。很多人都不知道-Redis-是单线程工作模型。"><a href="#单线程的-Redis-为什么这么快-这个问题是对-Redis-内部机制的一个考察。很多人都不知道-Redis-是单线程工作模型。" class="headerlink" title="单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。"></a>单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。</h2><h2 id="原因主要是以下三点："><a href="#原因主要是以下三点：" class="headerlink" title="原因主要是以下三点："></a>原因主要是以下三点：</h2> <a id="more"></a>
 
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/06/redis/" itemprop="url">
-              
-                <span itemprop="name">redis</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-06T15:57:44+08:00" content="2019-10-06">
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+<p> 纯内存操作</p>
+<p> 单线程操作，避免了频繁的上下文切换</p>
+<p>采用了非阻塞 I/O 多路复用机制</p>
+<p>仔细说一说 I/O 多路复用机制，打一个比方：小名在 A 城开了一家快餐店店，负责同城快餐服务。小明因为资金限制，雇佣了一批配送员，然后小曲发现资金不够了，只够买一辆车送快递。</p>
+<h3 id="经营方式一"><a href="#经营方式一" class="headerlink" title="经营方式一"></a>经营方式一</h3><p>客户每下一份订单，小明就让一个配送员盯着，然后让人开车去送。慢慢的小曲就发现了这种经营方式存在下述问题：</p>
+<p>时间都花在了抢车上了，大部分配送员都处在闲置状态，抢到车才能去送。</p>
+<p>随着下单的增多，配送员也越来越多，小明发现快递店里越来越挤，没办法雇佣新的配送员了。</p>
+<p>配送员之间的协调很花时间。</p>
+<p>综合上述缺点，小明痛定思痛，提出了经营方式二。</p>
+<h3 id="经营方式二"><a href="#经营方式二" class="headerlink" title="经营方式二"></a>经营方式二</h3><p>小明只雇佣一个配送员。当客户下单，小明按送达地点标注好，依次放在一个地方。最后，让配送员依次开着车去送，送好了就回来拿下一个。上述两种经营方式对比，很明显第二种效率更高。</p>
+<p>在上述比喻中：</p>
+<p>每个配送员→每个线程</p>
+<p>每个订单→每个 Socket(I/O 流)</p>
+<p>订单的送达地点→Socket 的不同状态</p>
+<p>客户送餐请求→来自客户端的请求</p>
+<p>明曲的经营方式→服务端运行的代码</p>
+<p>一辆车→CPU 的核数</p>
+<p>于是有了如下结论：</p>
+<p>经营方式一就是传统的并发模型，每个 I/O 流(订单)都有一个新的线程(配送员)管理。</p>
+<p>经营方式二就是 I/O 多路复用。只有单个线程(一个配送员)，通过跟踪每个 I/O 流的状态(每个配送员的送达地点)，来管理多个 I/O 流。</p>
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/10/06/travle/" itemprop="url">
-              
-                <span itemprop="name">travle</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-10-06T13:47:29+08:00" content="2019-10-06">
-          10-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/30/blogspring/" itemprop="url">
-              
-                <span itemprop="name">图谋</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-30T11:37:27+08:00" content="2019-09-30">
-          09-30
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/23/锁/" itemprop="url">
-              
-                <span itemprop="name">锁</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-23T11:49:38+08:00" content="2019-09-23">
-          09-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/02/http/" itemprop="url">
-              
-                <span itemprop="name">想起http还没有仔细思考过</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-02T19:49:33+08:00" content="2019-09-02">
-          09-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/09/01/index/" itemprop="url">
-              
-                <span itemprop="name">flutter</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-09-01T19:49:33+08:00" content="2019-09-01">
-          09-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/08/01/bolg锁/" itemprop="url">
-              
-                <span itemprop="name">倒计时</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-08-01T11:48:57+08:00" content="2019-08-01">
-          08-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2019/05/01/world/" itemprop="url">
-              
-                <span itemprop="name">spring注解</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-01T23:40:14+08:00" content="2019-05-01">
-          05-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/redis/" rel="tag"># redis</a>
+          
+            <a href="/tags/单线程/" rel="tag"># 单线程</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/06/travle/" rel="next" title="travle">
+                <i class="fa fa-chevron-left"></i> travle
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/06/redis-1/" rel="prev" title="redis">
+                redis <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -632,6 +424,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -652,8 +448,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -704,6 +509,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#单线程的-Redis-为什么这么快-这个问题是对-Redis-内部机制的一个考察。很多人都不知道-Redis-是单线程工作模型。"><span class="nav-number">1.</span> <span class="nav-text">单线程的 Redis 为什么这么快  这个问题是对 Redis 内部机制的一个考察。很多人都不知道 Redis 是单线程工作模型。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原因主要是以下三点："><span class="nav-number">2.</span> <span class="nav-text">原因主要是以下三点：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#经营方式一"><span class="nav-number">2.1.</span> <span class="nav-text">经营方式一</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#经营方式二"><span class="nav-number">2.2.</span> <span class="nav-text">经营方式二</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -837,6 +658,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
