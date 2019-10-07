@@ -88,7 +88,7 @@
 <meta property="og:description" content="介绍并理解java的红黑树，hashmap。">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://yoursite.com/.com//tree.png">
-<meta property="og:updated_time" content="2019-10-06T09:17:06.059Z">
+<meta property="og:updated_time" content="2019-10-07T09:21:40.547Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="红黑树">
 <meta name="twitter:description" content="介绍并理解java的红黑树，hashmap。">
@@ -333,8 +333,12 @@
 
       
         <h2 id="介绍并理解java的红黑树，hashmap。"><a href="#介绍并理解java的红黑树，hashmap。" class="headerlink" title="介绍并理解java的红黑树，hashmap。"></a>介绍并理解java的红黑树，hashmap。</h2><a id="more"></a>
-<h2 id><a href="#" class="headerlink" title></a><img src="/.com//tree.png" alt></h2><p>HashMap 的数据结构是“数组+链表+红黑树”的结合，</p>
 
+<h3 id="HashMap-的数据结构是“数组-链表-红黑树”的结合，"><a href="#HashMap-的数据结构是“数组-链表-红黑树”的结合，" class="headerlink" title="HashMap 的数据结构是“数组+链表+红黑树”的结合，"></a>HashMap 的数据结构是“数组+链表+红黑树”的结合，</h3><p> HashMap 底层是基于数组和链表实现的，其中两个重要的参数：容量和负载因子；容量的默认大小是 16，负载因子是 0.75，当 HashMap 的 size &gt; 16*0.75 时就会发生扩容(容量和负载因子都可以自由调整)</p>
+<p> 内部包含了一个 Entry 类型的数组 table。HashMap的主干是一个Entry数组。Entry是HashMap的基本组成单元，每一个Entry包含一个key-value键值对。</p>
+<p>HashMap由数组+链表组成的，数组是HashMap的主体，<strong>链表</strong>则是主要为了解决<em>哈希冲突</em>而存在的，如果定位到的数组位置不含链表（当前entry的next指向null）,那么对于查找，添加等操作很快，仅需一次寻址即可；如果定位到的数组包含链表，对于添加操作，其时间复杂度为O(n)，首先遍历链表，存在即覆盖，否则新增；对于查找操作来讲，仍需遍历链表，然后通过key对象的equals方法逐一比对查找。所以，性能考虑，HashMap中的链表出现越少，性能才会越好。由此出现了红黑树提高了查找的效率，链表项的数目大于8则对其进行树化。</p>
+<h2 id="红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o-logn"><a href="#红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o-logn" class="headerlink" title=" 红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o(logn)"></a><img src="/.com//tree.png" alt="红黑树"> 红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o(logn)</h2><h3 id="红黑树的五个性质"><a href="#红黑树的五个性质" class="headerlink" title="红黑树的五个性质"></a>红黑树的五个性质</h3><p>0.节点为红或黑<br>1.根节点为黑<br>2.不能有两个连续的红节点<br>3.每个叶节点（NIL或空节点）是黑色；<br>4.从任一节点到其没个叶节点的所有路径都包含相同数目的黑色节点(不太理解)</p>
+<h2 id="红黑树的插入"><a href="#红黑树的插入" class="headerlink" title="红黑树的插入"></a>红黑树的插入</h2>
       
     </div>
     
@@ -495,7 +499,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍并理解java的红黑树，hashmap。"><span class="nav-number">1.</span> <span class="nav-text">介绍并理解java的红黑树，hashmap。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">2.</span> <span class="nav-text"></span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍并理解java的红黑树，hashmap。"><span class="nav-number">1.</span> <span class="nav-text">介绍并理解java的红黑树，hashmap。</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap-的数据结构是“数组-链表-红黑树”的结合，"><span class="nav-number">1.1.</span> <span class="nav-text">HashMap 的数据结构是“数组+链表+红黑树”的结合，</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o-logn"><span class="nav-number">2.</span> <span class="nav-text"> 红黑树的时间复杂度跟平衡二叉树一样，就是树的高度o(logn)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#红黑树的五个性质"><span class="nav-number">2.1.</span> <span class="nav-text">红黑树的五个性质</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#红黑树的插入"><span class="nav-number">3.</span> <span class="nav-text">红黑树的插入</span></a></li></ol></div>
             
 
           </div>
