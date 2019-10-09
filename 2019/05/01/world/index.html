@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="星星">
 <meta property="og:description" content="springboot思考说@注解================== @configuration1.从定义来看， @Configuration 注解本质上还是 @Component，因此 context:component-scan/ 或者 @ComponentScan 都能处理@Configuration 注解的类。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-06T07:47:48.554Z">
+<meta property="og:updated_time" content="2019-10-09T03:48:01.621Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spring注解">
 <meta name="twitter:description" content="springboot思考说@注解================== @configuration1.从定义来看， @Configuration 注解本质上还是 @Component，因此 context:component-scan/ 或者 @ComponentScan 都能处理@Configuration 注解的类。">
@@ -342,7 +342,10 @@
      （6）、任何嵌套配置类都必须声明为static；
 
 （7）、@Bean 方法可能不会反过来创建进一步的配置类（也就是返回的 bean 如果带有 @Configuration，也不会被特殊处理，只会作为普通的 bean）；</code></pre><h2 id="ComponentScan"><a href="#ComponentScan" class="headerlink" title="@ComponentScan"></a>@ComponentScan</h2><pre><code>扫描bean批量注入IoC
-@ComponentScan注解默认就会装配标识了@Controller，@Service，@Repository，@Component注解的类到spring容器中；</code></pre>
+@ComponentScan注解默认就会装配标识了@Controller，@Service，@Repository，@Component注解的类到spring容器中；</code></pre><h2 id="和-数据库使用中两者的区别"><a href="#和-数据库使用中两者的区别" class="headerlink" title="#{}和${}数据库使用中两者的区别"></a>#{}和${}数据库使用中两者的区别</h2><p>   1.#{}表示一个占位符号，通过#{}可以实现preparedStatement向占位符中设置值，自动进行java类型和jdbc类型转换，#{}可以有效防止sql注入。 #{}可以接收简单类型值或pojo属性值。 如果parameterType传输单个简单类型值，#{}括号中可以是value或其它名称。</p>
+<p>2.${}表示拼接sql串，通过${}可以将parameterType 传入的内容拼接在sql中且不进行jdbc类型转换， ${}可以接收简单类型值或pojo属性值，如果parameterType传输单个简单类型值，${}括号中只能是value。</p>
+<h1 id="大概来说就是-方法可以防止注入，因为进行了类型转换-而-方法直接使用了sql的方法传入了数据库没有数据转化有风险"><a href="#大概来说就是-方法可以防止注入，因为进行了类型转换-而-方法直接使用了sql的方法传入了数据库没有数据转化有风险" class="headerlink" title="大概来说就是#{}方法可以防止注入，因为进行了类型转换    而${}方法直接使用了sql的方法传入了数据库没有数据转化有风险"></a>大概来说就是#{}方法可以防止注入，因为进行了类型转换    而${}方法直接使用了sql的方法传入了数据库没有数据转化有风险</h1><h2 id="xml中的驼峰规则与resultmap映射"><a href="#xml中的驼峰规则与resultmap映射" class="headerlink" title="xml中的驼峰规则与resultmap映射"></a>xml中的驼峰规则与resultmap映射</h2><p> resultmap映射<br> column 代表数据库的某字段映射映射<br> property 代表bean的某个映射</p>
+
       
     </div>
     
@@ -459,7 +462,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -471,8 +474,8 @@
               
               
               <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                <a href="/tas/index.html">
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -505,7 +508,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#springboot思考说-注解"><span class="nav-number">1.</span> <span class="nav-text">springboot思考说@注解</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number"></span> <span class="nav-text">@configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ComponentScan"><span class="nav-number"></span> <span class="nav-text">@ComponentScan</span></a></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#springboot思考说-注解"><span class="nav-number">1.</span> <span class="nav-text">springboot思考说@注解</span></a></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#configuration"><span class="nav-number"></span> <span class="nav-text">@configuration</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ComponentScan"><span class="nav-number"></span> <span class="nav-text">@ComponentScan</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#和-数据库使用中两者的区别"><span class="nav-number"></span> <span class="nav-text">#{}和${}数据库使用中两者的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#大概来说就是-方法可以防止注入，因为进行了类型转换-而-方法直接使用了sql的方法传入了数据库没有数据转化有风险"><span class="nav-number"></span> <span class="nav-text">大概来说就是#{}方法可以防止注入，因为进行了类型转换    而${}方法直接使用了sql的方法传入了数据库没有数据转化有风险</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#xml中的驼峰规则与resultmap映射"><span class="nav-number"></span> <span class="nav-text">xml中的驼峰规则与resultmap映射</span></a></li></ol></li></div>
             
 
           </div>
