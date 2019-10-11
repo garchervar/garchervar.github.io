@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="星星">
 <meta property="og:description" content="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-10T10:29:20.717Z">
+<meta property="og:updated_time" content="2019-10-11T15:35:30.251Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="sql学习">
 <meta name="twitter:description" content="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作">
@@ -332,7 +332,10 @@
       
         <h2 id="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作"><a href="#初步学习在spring中使用sql语句写xml实现mapper对数据库的操作" class="headerlink" title="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作"></a>初步学习在spring中使用sql语句写xml实现mapper对数据库的操作</h2><a id="more"></a>
 
-<h2 id="今天看到了一些没见过的写法"><a href="#今天看到了一些没见过的写法" class="headerlink" title="今天看到了一些没见过的写法"></a>今天看到了一些没见过的写法</h2>
+<h2 id="今天看到了一些没见过的写法"><a href="#今天看到了一些没见过的写法" class="headerlink" title="今天看到了一些没见过的写法"></a>今天看到了一些没见过的写法</h2> 
+<p> 其中的 ‘hr’ ‘h’很不理解，甚至在select from里的h.*也很疑惑代表什么,后来看了sql在多张表的操作中了解到，这是叫做sql的别名，顾名思义也就是某个表的别名为了方便操作而出现的。<br> 如select article1.user,article1.password,article1.title from article1,article2 where article1.user=article2.user</p>
+<p> 在别名时可以写成  select a.user,a.password,a.title from article1 a,article2 b where a.user=b.user</p>
+
       
     </div>
     
