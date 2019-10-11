@@ -454,7 +454,7 @@
       
         
           
-            <h3 id="把一件简单的事情搞复杂很容易-这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单-这是spring-boot的图谋"><a href="#把一件简单的事情搞复杂很容易-这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单-这是spring-boot的图谋" class="headerlink" title="把一件简单的事情搞复杂很容易,这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单,这是spring boot的图谋"></a>把一件简单的事情搞复杂很容易,这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单,这是spring boot的图谋</h3><h3 id="spring的学习是一个充满乐趣与惊喜的旅行"><a href="#spring的学习是一个充满乐趣与惊喜的旅行" class="headerlink" title="spring的学习是一个充满乐趣与惊喜的旅行"></a>spring的学习是一个充满乐趣与惊喜的旅行</h3><p>今天打算用xml来代替注解来实现sql操作，其实是想混用。<br>先讲讲我的思路，我打算吧<strong>mapper.xml与</strong>mapper.java文件放在一个文件夹下，我在github上参考了一个项目，感觉这样更佳直观更利于管理。<br>当我把xml文件写好的时候问题出现了。在我run了这个spring后，访问我在controller层里写好的某路径调用方法时(如访问，/all,代码写的访问全部select * from)。控制台报错了，显示 mapper.findAll (not found)。看这个报错我估计应该是xml文件没有被扫描到，导致我内置的方法无法在mapper中使用出来导致的报错。</p>
+            <h3 id="把一件简单的事情搞复杂很容易-这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单-这是spring-boot的图谋"><a href="#把一件简单的事情搞复杂很容易-这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单-这是spring-boot的图谋" class="headerlink" title="把一件简单的事情搞复杂很容易,这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单,这是spring boot的图谋"></a>把一件简单的事情搞复杂很容易,这是spring及其几十个子项目干的事情把这件很复杂的事情又使其归回简单,这是spring boot的图谋</h3><h3 id="spring的学习是一个充满乐趣与惊喜的旅行"><a href="#spring的学习是一个充满乐趣与惊喜的旅行" class="headerlink" title="spring的学习是一个充满乐趣与惊喜的旅行"></a>spring的学习是一个充满乐趣与惊喜的旅行</h3><p>今天打算用xml来代替注解来实现sql操作，其实是想混用。<br>先讲讲我的思路，我打算吧<strong>**mapper.xml</strong>与<strong>**mapper.java</strong>文件放在一个文件夹下，我在github上参考了一个项目，感觉这样更佳直观更利于管理。<br>当我把xml文件写好的时候问题出现了。在我run了这个spring后，访问我在controller层里写好的某路径调用方法时(如访问，/all,代码写的访问全部select * from)。控制台报错了，显示 mapper.findAll (not found)。看这个报错我估计应该是xml文件没有被扫描到，导致我内置的方法无法在mapper中使用出来导致的报错。</p>
 
           
         
