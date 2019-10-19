@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="spring,sql,Mybatis,">
 
 
 
@@ -79,14 +79,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="about">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作">
+<meta name="keywords" content="spring,sql,Mybatis">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sql学习">
+<meta property="og:url" content="http://yoursite.com/2019/10/09/学习sql.1/index.html">
 <meta property="og:site_name" content="星星">
+<meta property="og:description" content="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-24T10:33:33.418Z">
+<meta property="og:updated_time" content="2019-10-19T03:32:18.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="about">
+<meta name="twitter:title" content="sql学习">
+<meta name="twitter:description" content="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作">
 
 
 
@@ -116,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/">
+  <link rel="canonical" href="http://yoursite.com/2019/10/09/学习sql.1/">
 
 
 
 
 
-  <title>about | 星星</title>
+  <title>sql学习 | 星星</title>
   
 
 
@@ -247,33 +251,156 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/09/学习sql.1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="garcherd">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="星星">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">about</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
+          <h1 class="post-title" itemprop="name headline">sql学习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-09T23:32:25+08:00">
+                2019-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        
-      </div>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作"><a href="#初步学习在spring中使用sql语句写xml实现mapper对数据库的操作" class="headerlink" title="初步学习在spring中使用sql语句写xml实现mapper对数据库的操作"></a>初步学习在spring中使用sql语句写xml实现mapper对数据库的操作</h2><a id="more"></a>
+
+<h2 id="今天看到了一些没见过的写法"><a href="#今天看到了一些没见过的写法" class="headerlink" title="今天看到了一些没见过的写法"></a>今天看到了一些没见过的写法</h2> 
+<p> 其中的 ‘hr’ ‘h’很不理解，甚至在select from里的h.*也很疑惑代表什么,后来看了sql在多张表的操作中了解到，这是叫做sql的别名，顾名思义也就是某个表的别名为了方便操作而出现的。<br> 如select article1.user,article1.password,article1.title from article1,article2 where article1.user=article2.user</p>
+<p> 在别名时可以写成  select a.user,a.password,a.title from article1 a,article2 b where a.user=b.user</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/spring/" rel="tag"># spring</a>
+          
+            <a href="/tags/sql/" rel="tag"># sql</a>
+          
+            <a href="/tags/Mybatis/" rel="tag"># Mybatis</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/10/06/tree/" rel="next" title="红黑树">
+                <i class="fa fa-chevron-left"></i> 红黑树
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/10/09/学习sql/" rel="prev" title="sql学习">
+                sql学习 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -306,8 +433,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -358,6 +494,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#初步学习在spring中使用sql语句写xml实现mapper对数据库的操作"><span class="nav-number">1.</span> <span class="nav-text">初步学习在spring中使用sql语句写xml实现mapper对数据库的操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#今天看到了一些没见过的写法"><span class="nav-number">2.</span> <span class="nav-text">今天看到了一些没见过的写法</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
